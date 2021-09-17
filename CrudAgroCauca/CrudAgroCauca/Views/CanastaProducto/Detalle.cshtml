@@ -1,0 +1,58 @@
+﻿@model CrudAgroCauca.Models.CanastaProducto
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>CanastaProducto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagenProducto)
+        </dt>
+
+        <dd>
+            <img src="@Html.DisplayFor(model => model.ImagenProducto)" width="400px" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadProdcto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadProdcto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecioProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescuentoProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescuentoProducto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.Id }) |
+    @Html.ActionLink("Ver productos", "Index")
+</p>

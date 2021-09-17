@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CrudAgroCauca.Models.Organizaciones>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Guardar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreOrganizacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagenOrganizacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UbicacionOrganizacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonoOrganizacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreOrganizacion)
+        </td>
+        <td>
+            <img src=" @Html.DisplayFor(modelItem => item.ImagenOrganizacion)" width="200px" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UbicacionOrganizacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefonoOrganizacion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+            @Html.ActionLink("Ver", "Detalle", new { id = item.Id }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>

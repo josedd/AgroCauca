@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AgroCaucaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CanastaProducto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="NombreProducto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ImagenProducto" Type="nvarchar" MaxLength="200" />
+          <Property Name="CantidadProdcto" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="PrecioProducto" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="DescuentoProducto" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Eventos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="NombreEvento" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UbicacionEvento" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Inversionistas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="NombreInversionista" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ImagenInversionista" Type="nvarchar" MaxLength="200" />
+          <Property Name="DescripcionInversionista" Type="nvarchar" MaxLength="500" />
+          <Property Name="UbicacionInversionista" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Organizaciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="NombreOrganizacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ImagenOrganizacion" Type="nvarchar" MaxLength="200" />
+          <Property Name="UbicacionOrganizacion" Type="nvarchar" MaxLength="200" />
+          <Property Name="TelefonoOrganizacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="AgroCaucaModelStoreContainer">
+          <EntitySet Name="CanastaProducto" EntityType="Self.CanastaProducto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Eventos" EntityType="Self.Eventos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inversionistas" EntityType="Self.Inversionistas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Organizaciones" EntityType="Self.Organizaciones" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AgroCaucaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CanastaProducto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="NombreProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ImagenProducto" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CantidadProdcto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="PrecioProducto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="DescuentoProducto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Eventos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="NombreEvento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UbicacionEvento" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Inversionistas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="NombreInversionista" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ImagenInversionista" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DescripcionInversionista" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UbicacionInversionista" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Organizaciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="NombreOrganizacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ImagenOrganizacion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UbicacionOrganizacion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TelefonoOrganizacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="AgroCaucaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CanastaProducto" EntityType="Self.CanastaProducto" />
+          <EntitySet Name="Eventos" EntityType="Self.Eventos" />
+          <EntitySet Name="Inversionistas" EntityType="Self.Inversionistas" />
+          <EntitySet Name="Organizaciones" EntityType="Self.Organizaciones" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AgroCaucaModelStoreContainer" CdmEntityContainer="AgroCaucaEntities">
+          <EntitySetMapping Name="CanastaProducto">
+            <EntityTypeMapping TypeName="AgroCaucaModel.CanastaProducto">
+              <MappingFragment StoreEntitySet="CanastaProducto">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="ImagenProducto" ColumnName="ImagenProducto" />
+                <ScalarProperty Name="CantidadProdcto" ColumnName="CantidadProdcto" />
+                <ScalarProperty Name="PrecioProducto" ColumnName="PrecioProducto" />
+                <ScalarProperty Name="DescuentoProducto" ColumnName="DescuentoProducto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Eventos">
+            <EntityTypeMapping TypeName="AgroCaucaModel.Eventos">
+              <MappingFragment StoreEntitySet="Eventos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NombreEvento" ColumnName="NombreEvento" />
+                <ScalarProperty Name="UbicacionEvento" ColumnName="UbicacionEvento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inversionistas">
+            <EntityTypeMapping TypeName="AgroCaucaModel.Inversionistas">
+              <MappingFragment StoreEntitySet="Inversionistas">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NombreInversionista" ColumnName="NombreInversionista" />
+                <ScalarProperty Name="ImagenInversionista" ColumnName="ImagenInversionista" />
+                <ScalarProperty Name="DescripcionInversionista" ColumnName="DescripcionInversionista" />
+                <ScalarProperty Name="UbicacionInversionista" ColumnName="UbicacionInversionista" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Organizaciones">
+            <EntityTypeMapping TypeName="AgroCaucaModel.Organizaciones">
+              <MappingFragment StoreEntitySet="Organizaciones">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NombreOrganizacion" ColumnName="NombreOrganizacion" />
+                <ScalarProperty Name="ImagenOrganizacion" ColumnName="ImagenOrganizacion" />
+                <ScalarProperty Name="UbicacionOrganizacion" ColumnName="UbicacionOrganizacion" />
+                <ScalarProperty Name="TelefonoOrganizacion" ColumnName="TelefonoOrganizacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

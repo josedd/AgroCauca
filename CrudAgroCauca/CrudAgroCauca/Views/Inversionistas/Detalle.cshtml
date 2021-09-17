@@ -1,0 +1,50 @@
+﻿@model CrudAgroCauca.Models.Inversionistas
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Inversionistas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreInversionista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreInversionista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagenInversionista)
+        </dt>
+
+        <dd>
+            <img src=" @Html.DisplayFor(model => model.ImagenInversionista)" width="400" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescripcionInversionista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescripcionInversionista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UbicacionInversionista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UbicacionInversionista)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.Id }) |
+    @Html.ActionLink("Ver Inversionistas", "Index")
+</p>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgroCaucaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CanastaProducto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NombreProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ImagenProducto" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CantidadProdcto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PrecioProducto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="DescuentoProducto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Eventos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NombreEvento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UbicacionEvento" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Inversionistas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NombreInversionista" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ImagenInversionista" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DescripcionInversionista" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UbicacionInversionista" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Organizaciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NombreOrganizacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ImagenOrganizacion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UbicacionOrganizacion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TelefonoOrganizacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AgroCaucaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CanastaProducto" EntityType="Self.CanastaProducto" />
+    <EntitySet Name="Eventos" EntityType="Self.Eventos" />
+    <EntitySet Name="Inversionistas" EntityType="Self.Inversionistas" />
+    <EntitySet Name="Organizaciones" EntityType="Self.Organizaciones" />
+  </EntityContainer>
+</Schema>

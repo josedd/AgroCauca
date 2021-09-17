@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CrudAgroCauca.Models.CanastaProducto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Guardar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagenProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadProdcto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescuentoProducto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreProducto)
+        </td>
+        <td>
+            <img src="@Html.DisplayFor(modelItem => item.ImagenProducto)" width="200px" />
+
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadProdcto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescuentoProducto)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+            @Html.ActionLink("Ver", "Detalle", new { id = item.Id }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>

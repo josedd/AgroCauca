@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CrudAgroCauca.Models.Inversionistas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Guardar")
+</p>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <font color="green">@ViewBag.mensaje</font>
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreInversionista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagenInversionista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescripcionInversionista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UbicacionInversionista)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreInversionista)
+            </td>
+            <td>
+                <img src=" @Html.DisplayFor(modelItem => item.ImagenInversionista)" width="200px" />            
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionInversionista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UbicacionInversionista)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                @Html.ActionLink("Ver", "Detalle", new { id = item.Id }) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

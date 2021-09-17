@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgroCaucaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CanastaProducto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="NombreProducto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ImagenProducto" Type="nvarchar" MaxLength="200" />
+    <Property Name="CantidadProdcto" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="PrecioProducto" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DescuentoProducto" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Eventos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="NombreEvento" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UbicacionEvento" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Inversionistas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="NombreInversionista" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ImagenInversionista" Type="nvarchar" MaxLength="200" />
+    <Property Name="DescripcionInversionista" Type="nvarchar" MaxLength="500" />
+    <Property Name="UbicacionInversionista" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Organizaciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="NombreOrganizacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ImagenOrganizacion" Type="nvarchar" MaxLength="200" />
+    <Property Name="UbicacionOrganizacion" Type="nvarchar" MaxLength="200" />
+    <Property Name="TelefonoOrganizacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AgroCaucaModelStoreContainer">
+    <EntitySet Name="CanastaProducto" EntityType="Self.CanastaProducto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Eventos" EntityType="Self.Eventos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inversionistas" EntityType="Self.Inversionistas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organizaciones" EntityType="Self.Organizaciones" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

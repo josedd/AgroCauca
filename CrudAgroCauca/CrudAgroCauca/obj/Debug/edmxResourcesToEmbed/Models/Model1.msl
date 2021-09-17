@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgroCaucaModelStoreContainer" CdmEntityContainer="AgroCaucaEntities">
+    <EntitySetMapping Name="CanastaProducto">
+      <EntityTypeMapping TypeName="AgroCaucaModel.CanastaProducto">
+        <MappingFragment StoreEntitySet="CanastaProducto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="ImagenProducto" ColumnName="ImagenProducto" />
+          <ScalarProperty Name="CantidadProdcto" ColumnName="CantidadProdcto" />
+          <ScalarProperty Name="PrecioProducto" ColumnName="PrecioProducto" />
+          <ScalarProperty Name="DescuentoProducto" ColumnName="DescuentoProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Eventos">
+      <EntityTypeMapping TypeName="AgroCaucaModel.Eventos">
+        <MappingFragment StoreEntitySet="Eventos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NombreEvento" ColumnName="NombreEvento" />
+          <ScalarProperty Name="UbicacionEvento" ColumnName="UbicacionEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inversionistas">
+      <EntityTypeMapping TypeName="AgroCaucaModel.Inversionistas">
+        <MappingFragment StoreEntitySet="Inversionistas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NombreInversionista" ColumnName="NombreInversionista" />
+          <ScalarProperty Name="ImagenInversionista" ColumnName="ImagenInversionista" />
+          <ScalarProperty Name="DescripcionInversionista" ColumnName="DescripcionInversionista" />
+          <ScalarProperty Name="UbicacionInversionista" ColumnName="UbicacionInversionista" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organizaciones">
+      <EntityTypeMapping TypeName="AgroCaucaModel.Organizaciones">
+        <MappingFragment StoreEntitySet="Organizaciones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NombreOrganizacion" ColumnName="NombreOrganizacion" />
+          <ScalarProperty Name="ImagenOrganizacion" ColumnName="ImagenOrganizacion" />
+          <ScalarProperty Name="UbicacionOrganizacion" ColumnName="UbicacionOrganizacion" />
+          <ScalarProperty Name="TelefonoOrganizacion" ColumnName="TelefonoOrganizacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
